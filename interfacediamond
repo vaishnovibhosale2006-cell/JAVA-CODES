@@ -1,0 +1,31 @@
+interface A
+{
+    void display();
+}
+
+interface B extends A
+{
+    void display();
+}
+
+interface C extends A
+{
+    void display();
+}
+
+class D implements B, C
+{
+    public void display()
+    {
+        System.out.println("Display method implemented in class D");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        D obj = new D();
+        obj.display();
+    }
+}
